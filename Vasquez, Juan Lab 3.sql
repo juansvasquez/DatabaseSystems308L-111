@@ -30,7 +30,7 @@ WHERE city = 'Dallas';
 
 SELECT name 
 FROM agents 
-WHERE city != 'New York' AND city != 'Tokyo';
+WHERE city NOT IN ('New York','Tokyo');
 
 --6. List all data for products not in Dallas or Duluth that cost US$1 or more.
 
