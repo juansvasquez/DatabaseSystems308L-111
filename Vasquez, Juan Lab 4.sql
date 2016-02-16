@@ -9,8 +9,7 @@ WHERE aid IN (
 	SELECT aid
 	FROM orders
 	WHERE cid = 'c002'
-)
-;
+);
 
 /* 2. Get the ids of products ordered through any agent who takes at least
 one order from a customer in Dallas, sorted by pid from highest to lowest.
@@ -35,8 +34,7 @@ WHERE cid NOT IN (
 	SELECT cid
 	FROM orders
 	WHERE aid = 'a01'
-)
-;
+);
 
 --4. Get the ids of customers who ordered both product p01 and p07.
 SELECT distinct cid
@@ -46,8 +44,7 @@ AND cid IN (
 	SELECT cid
 	FROM orders
 	WHERE pid = 'p07'
-)  
-;
+);
 
 /* 5. Get the ids of products not ordered by any customers who placed any order 
 through agent a07 in pid order from highest to lowest. */
@@ -72,8 +69,7 @@ WHERE cid IN (
 		FROM agents
 		WHERE city IN ('London', 'New York')
 	)
-)
-;
+);
 
 --7. Get all customers who have the same discount as that of any customers in Dallas or	London.
 SELECT *
@@ -82,7 +78,7 @@ WHERE discount IN(
 	SELECT discount
 	FROM customers
 	WHERE city IN ('Dallas', 'London')
-)
+);
 
 /*
 8. Tell me about check constraints: What are they? What are they good for? 
