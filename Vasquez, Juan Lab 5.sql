@@ -54,8 +54,6 @@ ON c.city = a.city
 
 /* 7. Show the name and city of customers who live in the city that makes the fewest 
 different kinds of products. (Hint: Use count and group by on the Products table.) */
---SELECT * FROM products;--
-
 SELECT c.name, c.city
 FROM customers c
 WHERE c.city IN (
